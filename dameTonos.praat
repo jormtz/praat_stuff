@@ -5,12 +5,14 @@ texts# = selected# ("TextGrid")
 
 #Calcula el tamaño del vector
 len = size (texts#)
-appendInfoLine: "Número de archivos: ", len
+appendInfoLine: "Número de archivos: ", len, newline$
 
 #Comienza un bucle sobre los TextGrids seleccionados
 for text from 1 to len 
     
     selectObject: texts# [text]
+
+    nomArchiv$ = selected$ ("TextGrid")
 
     #Obtiene el número de puntos en la grada 2 de Sp_TobI
     numCesuras = Get number of points: 2
@@ -31,7 +33,7 @@ for text from 1 to len
         #appendInfoLine: tab$, i, tab$, acento$ [i], tab$
     endfor
 
-    appendInfoLine: cadena$
+    appendInfoLine: nomArchiv$, tab$, cadena$
 
 endfor 
    
