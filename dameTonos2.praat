@@ -1,7 +1,10 @@
-# Antes de correr el script, carga y selecciona algunos archivos TextGrid.
-# Este script asume que las primeras cuatro gradas se corresponden al esquema
-# del sistema de etiquetado prosódico Sp_ToBI, con algunas anotaciones particulares
-# en la grada 4.
+
+#####################################################################################
+## Antes de correr el script, carga y selecciona algunos archivos TextGrid.
+## Este script asume que las primeras cuatro gradas de los archivos TextGrid se 
+## corresponden al esquema del sistema de etiquetado prosódico Sp_ToBI, con algunas 
+## anotaciones particulares en la grada 4.
+#####################################################################################
 
 # Limpia la pantalla de la consola.
 clearinfo
@@ -29,9 +32,7 @@ for text from 1 to size(texts#)
    # Recupera la etiqueta de cada punto e imprímela sobre la cadena vacía seguida de un tabulador.
    for i from 1 to numAcentos
       text$ = Get label of point: 3, i
-      #acento$ [i] = text$
-      cadena$ = cadena$ + text$ + tab$ 
-      #appendInfoLine: tab$, i, tab$, acento$ [i], tab$
+      cadena$ = cadena$ + text$ + tab$
    # Detiene el bucle anterior.
    endfor
 
