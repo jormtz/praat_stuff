@@ -29,8 +29,8 @@ for text from 1 to size(texts#)
    # Recupera la etiqueta de cada punto e imprímela sobre la cadena vacía seguida de un tabulador.
    for i from 1 to numAcentos
       text$ = Get label of point: 3, i
-      acento$ [i] = text$
-      cadena$ = cadena$ + acento$ [i] + tab$ 
+      #acento$ [i] = text$
+      cadena$ = cadena$ + text$ + tab$ 
       #appendInfoLine: tab$, i, tab$, acento$ [i], tab$
    # Detiene el bucle anterior.
    endfor
