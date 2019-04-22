@@ -1,39 +1,22 @@
 clearinfo
 
-#Crea un vector con los archivos TextGrid seleccionados
-texts# = selected# ("TextGrid")
+#Obtiene el número de puntos en la grada 2 de Sp_TobI
+numCesuras = Get number of points: 2
 
-#Calcula el tamaño del vector
-len = size (texts#)
-appendInfoLine: "Número de archivos: ", len, newline$
+# Obtiene el número de puntos en la grada 3 de Sp_TobI
+numAcentos = Get number of points: 3
 
-#Comienza un bucle sobre los TextGrids seleccionados
-for text from 1 to len 
-    
-    selectObject: texts# [text]
+# writeInfoLine: "Los acentos tonales de esta muestra son: ", newline$
 
-    nomArchiv$ = selected$ ("TextGrid")
+cadena$ = ""
 
-    #Obtiene el número de puntos en la grada 2 de Sp_TobI
-    numCesuras = Get number of points: 2
+for i from 1 to numAcentos
+    text$ = Get label of point: 3, i
+    acento$ [i] = text$
+    cadena$ = cadena$ + acento$ [i] + tab$ 
+    #appendInfoLine: tab$, i, tab$, acento$ [i], tab$
+endfor
 
-    # Obtiene el número de puntos en la grada 3 de Sp_TobI
-    numAcentos = Get number of points: 3
+appendInfoLine: cadena$
 
-    # writeInfoLine: "Los acentos tonales de esta muestra son: ", newline$
-
-    #Crea una cadena vacía
-    cadena$ = ""
-
-    #Comienza un bucle sobre la grada 3 de Sp_ToBI
-    for i from 1 to numAcentos
-        text$ = Get label of point: 3, i
-        acento$ [i] = text$
-        cadena$ = cadena$ + acento$ [i] + tab$ 
-        #appendInfoLine: tab$, i, tab$, acento$ [i], tab$
-    endfor
-
-    appendInfoLine: nomArchiv$, tab$, cadena$
-
-endfor 
    
