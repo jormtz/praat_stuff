@@ -39,34 +39,7 @@ for grid from 1 to size(grids#)
 		# Condición: si la variable <etiqueta$> no es una cadena vacía, continúa.
 		if etiqueta$ <> ""
 			# Define la variable <acentos$> como una cadena vacía.
-			acentos$ = ""
-			# Define la variable <iniInt> como el punto en el tiempo en el que comienza el intervalo actual.
-			iniINT = Get starting point: 4, i
-			# Suma 0.001 a la variable <iniINT> (Evita que se recojan dos veces las etiquetas cuyo valor temporal sea igual a iniINT o finINT)
-			iniINT = iniINT + 0.001
-			# Define la variable <finInt> como el punto en el tiempo en el que finaliza el intervalo actual.
-			finINT = Get end point: 4, i
-
-			# Define la variable <grid2> como un recorte del TextGrid seleccionado, contenido por los puntos inicio y fin del intervalo actual
-			grid2 = Extract part: iniINT, finINT, 1
-
-			# Selecciona el objeto <grid2>
-			selectObject: grid2
-			
-			# Define la variable <numInt3> como el número de intervalos contenidos en la grada 3 del objeto TextGrid seleccionado.
-			numInt3 = Get number of points: 3
-			
-			# Comienza un bucle que itera tantas veces como el valor de la variable <numInt3>
-			for point from 1 to numInt3
-				# Define la variable <acc$> como una cadena que contiene la etiqueta del punto seleccionado.
-				acc$ = Get label of point: 3, point
-				# Define la variable <acentos$> como una cadena compuesta por el valor actual de esta variable + un espacio + la variable <acc$>.
-				acentos$ = acentos$ + " " + acc$
-			# Finaliza el bucle.
-			endfor
-			# Remueve el objeto <grid2>.
-			removeObject: grid2
-			;appendInfoLine: acentos$
+			acentos$ = "-" + etiqueta$ + "-"						
 
 			# Condición: si la cadena es igual a "ANT", continúa.
 			if etiqueta$ = "ANT"
@@ -93,7 +66,7 @@ for grid from 1 to size(grids#)
 	# Finaliza el bucle.		
 	endfor
 	# Imprime una línea que contiene las variables <gridName$>, <ant$>, <cr$> y <pred$> separadas por tabuladores.	
-	appendInfoLine: gridName$ , tab$, ant$, tab$, cr$, tab$,  pred$
+	appendInfoLine: gridName$, tab$, ant$, tab$, cr$, tab$,  pred$
 
 # Finaliza el bucle actual.
 endfor
