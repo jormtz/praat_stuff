@@ -3,6 +3,8 @@
 ## Este script captura las etiquetas puntuales de la grada 2 de una transcripción 
 ## Sp_ToBI en un objeto TextGrid, ordenando las etiquetas en tres columnas distintas, 
 ## especificadas manualmente en la grada 4.
+##
+## PENDIENTES: El script duplica las etiquetas cuyo valor de tiempo es igual a <iniINT> o <finINT>.
 ####################################
 
 clearinfo
@@ -24,6 +26,7 @@ for grid from 1 to size(grids#)
 	# Define la variable <numInt> como el número de intervalos contenidos en la grada 4 del objeto TextGrid seleccionado.
 	numInt4 = Get number of intervals: 4
 
+	# Crea tres variables, una para cada intervalo que se analizará.
 	ant$ = ""
 	cr$ = ""
 	pred$ = ""
@@ -32,15 +35,17 @@ for grid from 1 to size(grids#)
 	for i from 1 to numInt4
 		# Obtén la etiqueta del intervalo actual.
 		select TextGrid 'gridName$'
-
+		# Define la variable <etiqueta$> como la cadena que esté en el intervalo actual.
 		etiqueta$ = Get label of interval: 4, i
 
-		# Condición: si la cadena no está vacía, continúa, si no, detente.
+		# Condición: si la variable <etiqueta$> no es una cadena vacía, continúa, si no, detén el condicional.
 		if etiqueta$ <> ""
 			# Define la variable <acentos$> como una cadena vacía.
 			acentos$ = ""
 			# Define la variable <iniInt> como el punto en el tiempo en el que comienza el intervalo actual.
 			iniINT = Get starting point: 4, i
+			# Suma 0.0001 a la variable <iniINT> (Evita que se recojan dos veces las etiquetas cuyo valor temporal sea igual a iniINT o finINT)
+			iniINT = iniINT + 0.001
 			# Define la variable <finInt> como el punto en el tiempo en el que comienza el intervalo actual.
 			finINT = Get end point: 4, i
 
