@@ -1,0 +1,216 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.40825 
+tiers? <exists> 
+size = 6 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "1" 
+        xmin = 0 
+        xmax = 2.40825 
+        intervals: size = 16 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.24452356523486604 
+            text = "<sil>" 
+        intervals [2]:
+            xmin = 0.24452356523486604 
+            xmax = 0.35500000000000004 
+            text = "el" 
+        intervals [3]:
+            xmin = 0.35500000000000004 
+            xmax = 0.4963856648060547 
+            text = "rui" 
+        intervals [4]:
+            xmin = 0.4963856648060547 
+            xmax = 0.6469685020813621 
+            text = "do" 
+        intervals [5]:
+            xmin = 0.6469685020813621 
+            xmax = 0.7929180212866601 
+            text = "del" 
+        intervals [6]:
+            xmin = 0.7929180212866601 
+            xmax = 0.9958834493995573 
+            text = "cual" 
+        intervals [7]:
+            xmin = 0.9958834493995573 
+            xmax = 1.068600446452223 
+            text = "me" 
+        intervals [8]:
+            xmin = 1.068600446452223 
+            xmax = 1.186791817775872 
+            text = "ha" 
+        intervals [9]:
+            xmin = 1.186791817775872 
+            xmax = 1.4649255613586065 
+            text = "blas" 
+        intervals [10]:
+            xmin = 1.4649255613586065 
+            xmax = 1.5916492196773673 
+            text = "t" 
+        intervals [11]:
+            xmin = 1.5916492196773673 
+            xmax = 1.6779375615247756 
+            text = "e" 
+        intervals [12]:
+            xmin = 1.6779375615247756 
+            xmax = 1.7307500034633418 
+            text = "ra" 
+        intervals [13]:
+            xmin = 1.7307500034633418 
+            xmax = 1.8633052817408624 
+            text = "un" 
+        intervals [14]:
+            xmin = 1.8633052817408624 
+            xmax = 2.0196526523521863 
+            text = "gri" 
+        intervals [15]:
+            xmin = 2.0196526523521863 
+            xmax = 2.139680282522522 
+            text = "llo" 
+        intervals [16]:
+            xmin = 2.139680282522522 
+            xmax = 2.40825 
+            text = "<sil>" 
+    item [2]:
+        class = "TextTier" 
+        name = "2" 
+        xmin = 0 
+        xmax = 2.40825 
+        points: size = 8 
+        points [1]:
+            number = 0.24452356523486604 
+            mark = "4" 
+        points [2]:
+            number = 0.6469685020813621 
+            mark = "1" 
+        points [3]:
+            number = 0.9958834493995573 
+            mark = "1" 
+        points [4]:
+            number = 1.068600446452223 
+            mark = "0" 
+        points [5]:
+            number = 1.5916492196773673 
+            mark = "3" 
+        points [6]:
+            number = 1.7307500034633418 
+            mark = "0" 
+        points [7]:
+            number = 1.8633052817408624 
+            mark = "1" 
+        points [8]:
+            number = 2.139680282522522 
+            mark = "4" 
+    item [3]:
+        class = "TextTier" 
+        name = "3" 
+        xmin = 0 
+        xmax = 2.40825 
+        points: size = 8 
+        points [1]:
+            number = 0.4672077263221159 
+            mark = "L+>¡H*" 
+        points [2]:
+            number = 0.9299959434550446 
+            mark = "L+>¡H*" 
+        points [3]:
+            number = 1.3114835278484045 
+            mark = "L+H*" 
+        points [4]:
+            number = 1.5916492196773673 
+            mark = "¡H-" 
+        points [5]:
+            number = 1.6361819100283819 
+            mark = "H*" 
+        points [6]:
+            number = 1.8013719558945227 
+            mark = "L*" 
+        points [7]:
+            number = 1.9639732213736598 
+            mark = "L*" 
+        points [8]:
+            number = 2.139680282522522 
+            mark = "L%" 
+    item [4]:
+        class = "IntervalTier" 
+        name = "4" 
+        xmin = 0 
+        xmax = 2.40825 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.24452356523486604 
+            text = "" 
+        intervals [2]:
+            xmin = 0.24452356523486604 
+            xmax = 0.6469685020813621 
+            text = "ANT" 
+        intervals [3]:
+            xmin = 0.6469685020813621 
+            xmax = 1.5916492196773673 
+            text = "CR" 
+        intervals [4]:
+            xmin = 1.5916492196773673 
+            xmax = 2.139680282522522 
+            text = "PRED" 
+        intervals [5]:
+            xmin = 2.139680282522522 
+            xmax = 2.40825 
+            text = "" 
+    item [5]:
+        class = "IntervalTier" 
+        name = "5" 
+        xmin = 0 
+        xmax = 2.40825 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.4963856648060547 
+            text = "" 
+        intervals [2]:
+            xmin = 0.4963856648060547 
+            xmax = 0.6469685020813621 
+            text = "s1" 
+        intervals [3]:
+            xmin = 0.6469685020813621 
+            xmax = 1.4649255613586065 
+            text = "" 
+        intervals [4]:
+            xmin = 1.4649255613586065 
+            xmax = 1.5916492196773673 
+            text = "s2" 
+        intervals [5]:
+            xmin = 1.5916492196773673 
+            xmax = 2.40825 
+            text = "" 
+    item [6]:
+        class = "IntervalTier" 
+        name = "6" 
+        xmin = 0 
+        xmax = 2.40825 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5705187539262061 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5705187539262061 
+            xmax = 0.6469685020813621 
+            text = "v1" 
+        intervals [3]:
+            xmin = 0.6469685020813621 
+            xmax = 1.5064490040681169 
+            text = "" 
+        intervals [4]:
+            xmin = 1.5064490040681169 
+            xmax = 1.5916492196773673 
+            text = "v2" 
+        intervals [5]:
+            xmin = 1.5916492196773673 
+            xmax = 2.40825 
+            text = "" 
