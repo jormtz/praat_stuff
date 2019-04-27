@@ -73,12 +73,12 @@ for grid from 1 to size(grids#)
 				# Define la variable <ant$> como una cadena equivalente a la variable <acentos$>
 				ant$ = acentos$
 
-			# Condición: si la cadena es igual a "ANT", continúam si no, detente.
+			# Condición: si la condicón anterior es falsa y la variable <etiqueta$> es igual a "CR", continúa.
 			elif etiqueta$ = "CR"
 				# Define la variable <cr$> como una cadena equivalente a la variable <acentos$>
 				cr$ = acentos$
 			
-			# Condición: si la cadena es igual a "ANT", continúam si no, detente.
+			# Condición: si la condicón anterior es falsa y la variable <etiqueta$> es igual a "PRED", continúa
 			elif etiqueta$ = "PRED"
 				# Define la variable <pred$> como una cadena equivalente a la variable <acentos$>
 				pred$ = acentos$
