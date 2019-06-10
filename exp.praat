@@ -4,9 +4,9 @@
 #
 ######################
 
-form ToBI explorer
-    text texto
-endform 
+;form ToBI explorer
+;    text texto
+;endform 
 
 # Limpia la pantalla
 clearinfo

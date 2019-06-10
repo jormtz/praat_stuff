@@ -1,6 +1,6 @@
 ####################################
 ## Antes de ejecutar este script, carga y selecciona algunos objetos del tipo TextGrid.
-## Este script captura las etiquetas puntuales de la grada 2 de una transcripción 
+## Este script captura las etiquetas de puntos de la grada 2 de una transcripción 
 ## Sp_ToBI en un objeto TextGrid, ordenando las etiquetas en tres columnas distintas, 
 ## especificadas manualmente en la grada 4.
 ####################################
