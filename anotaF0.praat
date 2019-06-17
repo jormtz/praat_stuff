@@ -1,9 +1,11 @@
 ######################
 # Toma una grada de intervalos y obtiene los comienzos, centros y finales de cada sección,
-# siempre y cuando no esté vacía o contenga un caracter no alfabético. 
+# siempre y cuando no esté vacía o no contenga un caracter no alfabético. 
 # Imprime estas divisiones en una nueva grada de puntos y etiquétalas con el valor de F0
 # en cada punto. Se utilizan las configuraciones locales del análisis de F0.
 ######################
+
+# Pendientes: tal vez incluir la opción de llamar la grada con intervalos por su nombre.
 
 # Limpia la pantalla
 clearinfo
@@ -44,21 +46,21 @@ for k from 1 to tam
         points# [i] = Get time from index: i
     endfor
 
+    # Remueve los objetos PointProcess
     removeObject: sPoints,  cPoints, ePoints, mergePoints1, mergePoints2     
     
-    # Ya tenemos los puntos en el tiempo donde hay que analizar la F0!
-    
+    # Ya tenemos los puntos en el tiempo donde hay que analizar la F0! Ahora, creamos un vector
+    # para contener los valores de F0
     pitchPoints# = zero# (numPoints)
     
-    # Agrega un tier en la última posición del TextGrid correspondiente al audio actualmente seleccionado
+    # Agrega una grada en la última posición del TextGrid correspondiente al audio actualmente seleccionado
     select TextGrid 'gridName$'
     numInt2 = Get number of tiers
     numInt2 = numInt2 + 1
-    ;grid = select TextGrid 'gridName$'
-    sonido = sounds# [k]
     selectObject: sounds# [k], "TextGrid " + gridName$
-    ;select TextGrid 'gridName$'
     View & Edit
+    
+    # Agrega los puntos en la grada creada y obtén los valores de F0 correspondientes
     editor: "TextGrid " + gridName$
         Add point tier: numInt2, "test"
         # Agrega los puntos requeridos
@@ -67,7 +69,7 @@ for k from 1 to tam
             Add on selected tier
             pitchPoints# [m] = Get pitch
         endfor
-    endeditor
+    Close
     
     # Imprime los valores de F0
     select TextGrid 'gridName$'
