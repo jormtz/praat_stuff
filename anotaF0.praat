@@ -1,4 +1,5 @@
 ######################
+# Autor: Jordi Martínez Martínez
 # Toma una grada de intervalos y obtiene los comienzos, centros y finales de cada sección,
 # siempre y cuando no esté vacía o no contenga un caracter no alfabético. 
 # Imprime estas divisiones en una nueva grada de puntos y etiquétalas con el valor de F0
@@ -23,7 +24,7 @@ for k from 1 to tam
     selectObject: sounds# [k]
     gridName$ = selected$ ("Sound")
     
-    # Crea objetos PointProcess con los puntos de inicio, centro y final de los intervalos con letras
+    # Crea objetos PointProcess con los puntos de inicio, centro y final de los intervalos con caracteres alfabéticos
     select TextGrid 'gridName$'
     sPoints = Get starting points: grada, "matches (regex)", "^[a-zA-Z]"
     select TextGrid 'gridName$'
